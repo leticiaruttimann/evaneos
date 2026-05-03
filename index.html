@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Evaneos · Analyse Produit · Leticia Rüttimann</title>
+<style>
+:root{--forest:#1a3326;--forest-mid:#2c4f3b;--sage:#4a7c59;--gold:#c9a84c;--gold-light:rgba(201,168,76,0.12);--cream:#f5f0e8;--warm:#faf8f4;--text:#1c1c1c;--muted:#6b6b6b;--light:#e8e4dc;--red:#b83232;--red-bg:rgba(184,50,50,0.06);--amber:#c47a0a;--amber-bg:rgba(196,122,10,0.07);--green:#2d7a4a;--green-bg:rgba(45,122,74,0.07);--border:rgba(0,0,0,0.08);--radius:16px;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--text);font-size:15px;line-height:1.6;}
+.nav{position:sticky;top:0;z-index:200;background:var(--forest);display:flex;align-items:center;justify-content:space-between;padding:0 40px;height:54px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-logo{font-family:'Fraunces',serif;font-size:17px;color:var(--cream);font-weight:300;text-decoration:none;letter-spacing:0.01em;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:12px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:rgba(245,240,232,0.45);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.lang-pill{display:flex;background:rgba(255,255,255,0.07);border-radius:20px;padding:3px;gap:1px;}
+.lang-btn{font-size:11px;font-weight:500;padding:4px 12px;border-radius:16px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:rgba(245,240,232,0.4);font-family:'DM Sans',sans-serif;}
+.lang-btn.active{background:var(--gold);color:var(--forest);}
+.eyebrow{font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);}
+.page-wrap{max-width:1200px;margin:0 auto;padding:0 40px;}
+.section{padding:72px 0 0;}
+.card{background:white;border:1px solid var(--border);border-radius:var(--radius);}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;}
+.badge-critical{background:var(--red-bg);color:var(--red);}
+.badge-medium{background:var(--amber-bg);color:var(--amber);}
+.badge-positive{background:var(--green-bg);color:var(--green);}
+.badge-neutral{background:rgba(0,0,0,0.05);color:var(--muted);}
+.footer{background:var(--forest);color:var(--cream);padding:48px 40px;margin-top:80px;}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.footer-name{font-family:'Fraunces',serif;font-size:20px;font-weight:300;}
+.footer-links{display:flex;gap:20px;}
+.footer-links a{font-size:12px;color:rgba(245,240,232,0.5);text-decoration:none;}
+.footer-note{font-size:12px;color:rgba(245,240,232,0.35);margin-top:4px;}
+body.lang-fr [data-lang="en"]{display:none!important;}
+body.lang-en [data-lang="fr"]{display:none!important;}
+@media(max-width:900px){.nav{padding:0 16px;}.nav-links{gap:12px;}.nav-links a{font-size:10px;}.page-wrap{padding:0 16px;}.footer{padding:32px 16px;}}
+</style>
+</head>
+<body class="lang-fr">
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">Leticia Rüttimann · Evaneos</a>
+  <div class="nav-links">
+    <a href="index.html" class="active"><span data-lang="fr">Accueil</span><span data-lang="en">Home</span></a><a href="problem-1.html"><span data-lang="fr">Problème 1</span><span data-lang="en">Problem 1</span></a><a href="problem-2.html"><span data-lang="fr">Problème 2</span><span data-lang="en">Problem 2</span></a><a href="problem-3.html"><span data-lang="fr">Problème 3</span><span data-lang="en">Problem 3</span></a><a href="evaneos-pm-assessment.html"><span data-lang="fr">À propos</span><span data-lang="en">About</span></a>
+    <div class="lang-pill">
+      <button class="lang-btn" data-lang="fr" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--forest);color:var(--cream);padding:100px 40px 80px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-100px;right:-100px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.08) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:10%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,89,0.12) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 380px;gap:60px;align-items:center;position:relative;z-index:1;">
+    <div>
+      <div style="display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:5px 16px;border-radius:20px;margin-bottom:32px;" data-lang="fr">Analyse produit · Evaneos + Trip Designer (Beta)</div>
+      <div style="display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:5px 16px;border-radius:20px;margin-bottom:32px;" data-lang="en">Product analysis · Evaneos + Trip Designer (Beta)</div>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(40px,5vw,68px);font-weight:300;line-height:1.0;letter-spacing:-0.02em;margin-bottom:24px;" data-lang="fr">Ce que j'ai trouvé<br>en <span style="font-weight:500;color:var(--sage);">explorant le produit.</span></h1>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(40px,5vw,68px);font-weight:300;line-height:1.0;letter-spacing:-0.02em;margin-bottom:24px;" data-lang="en">What I found<br><span style="font-weight:500;color:var(--sage);">exploring the product.</span></h1>
+      <p style="font-size:16px;color:rgba(245,240,232,0.55);font-weight:300;max-width:520px;margin-bottom:40px;line-height:1.75;" data-lang="fr">Une analyse terrain du parcours utilisateur, des points de friction identifiés, et des recommandations priorisées par ROI. Réalisée depuis l'extérieur, sans accès aux données internes — tout ce qui suit doit être validé avec les équipes.</p>
+      <p style="font-size:16px;color:rgba(245,240,232,0.55);font-weight:300;max-width:520px;margin-bottom:40px;line-height:1.75;" data-lang="en">A field-based analysis of the user journey, identified friction points, and ROI-driven recommendations. Conducted from the outside, without access to internal data — everything here should be validated with the teams.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#problems" class="btn btn-gold" data-lang="fr">Voir les problèmes identifiés</a>
+        <a href="#problems" class="btn btn-gold" data-lang="en">See identified problems</a>
+        <a href="evaneos-pm-assessment.html" class="btn" style="background:rgba(255,255,255,0.08);color:var(--cream);" data-lang="fr">À propos de moi</a>
+        <a href="evaneos-pm-assessment.html" class="btn" style="background:rgba(255,255,255,0.08);color:var(--cream);" data-lang="en">About me</a>
+      </div>
+    </div>
+    <!-- STATS SIDEBAR -->
+    <div style="display:flex;flex-direction:column;gap:16px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.35);margin-bottom:4px;" data-lang="fr">Evaneos en chiffres · Impact Report 2024</div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:rgba(245,240,232,0.35);margin-bottom:4px;" data-lang="en">Evaneos in numbers · 2024 Impact Report</div>
+      <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px;">
+        <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:300;color:var(--gold);min-width:80px;">800k+</div>
+        <div style="font-size:13px;color:rgba(245,240,232,0.6);line-height:1.5;">Voyageurs accompagnés / Travellers served</div>
+      </div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px;">
+        <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:300;color:var(--gold);min-width:80px;">640</div>
+        <div style="font-size:13px;color:rgba(245,240,232,0.6);line-height:1.5;">Agences partenaires / Partner agencies</div>
+      </div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px;">
+        <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:300;color:var(--gold);min-width:80px;">15 ans</div>
+        <div style="font-size:13px;color:rgba(245,240,232,0.6);line-height:1.5;">D'existence · Fondée en 2009 / Years in existence</div>
+      </div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px;">
+        <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:300;color:var(--gold);min-width:80px;">4,33/5</div>
+        <div style="font-size:13px;color:rgba(245,240,232,0.6);line-height:1.5;">Satisfaction agences 2024 / Agency satisfaction 2024</div>
+      </div><div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:20px 24px;display:flex;align-items:center;gap:20px;">
+        <div style="font-family:'Fraunces',serif;font-size:36px;font-weight:300;color:var(--gold);min-width:80px;">B Corp</div>
+        <div style="font-size:13px;color:rgba(245,240,232,0.6);line-height:1.5;">Certification · Tourisme responsable / Responsible tourism</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCT CONTEXT -->
+<div class="page-wrap">
+  <div class="section">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start;">
+      <div>
+        <div class="eyebrow" style="margin-bottom:16px;" data-lang="fr">Contexte produit</div>
+        <div class="eyebrow" style="margin-bottom:16px;" data-lang="en">Product context</div>
+        <h2 class="section-title" style="margin-bottom:20px;" data-lang="fr">Evaneos connecte des voyageurs à des <span style="font-weight:500;color:var(--sage);">agences locales.</span></h2>
+        <h2 class="section-title" style="margin-bottom:20px;" data-lang="en">Evaneos connects travellers to <span style="font-weight:500;color:var(--sage);">local agencies.</span></h2>
+        <p class="lead" data-lang="fr">La promesse centrale: co-créer un voyage sur mesure, authentique et responsable, avec un expert local. Ce que j'appelle les "Better Trips": des expériences qui bénéficient autant au voyageur qu'à la destination.</p>
+        <p class="lead" data-lang="en">The core promise: co-create a tailor-made, authentic and responsible trip with a local expert. What they call "Better Trips": experiences that benefit both the traveller and the destination.</p>
+        <div style="margin-top:28px;padding:20px 24px;background:var(--gold-light);border-radius:12px;border-left:3px solid var(--gold);">
+          <p style="font-size:13px;color:var(--forest);line-height:1.7;" data-lang="fr">Le Trip Designer (beta) est la fonctionnalité IA permettant de co-créer un itinéraire personnalisé avant d'être mis en relation avec une agence locale. C'est l'axe central de cette analyse.</p>
+          <p style="font-size:13px;color:var(--forest);line-height:1.7;" data-lang="en">Trip Designer (beta) is the AI feature that allows co-creating a personalised itinerary before being connected with a local agency. This is the central focus of this analysis.</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;padding-top:48px;">
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="fr">Flows testés</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="en">Flows tested</div>
+        <div style="background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🤖</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="fr">Chat IA · "On vous aide à choisir"</div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="en">AI Chat · "On vous aide à choisir"</div>
+          </div>
+        </div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">🗺️</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="fr">Recherche par destination + formulaire contact</div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="en">Destination search + agency contact form</div>
+          </div>
+        </div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">✈️</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="fr">Trip Designer (Beta) · Complet jusqu'au bout</div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="en">Trip Designer (Beta) · End-to-end</div>
+          </div>
+        </div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:16px 20px;display:flex;align-items:center;gap:14px;">
+          <div style="width:32px;height:32px;border-radius:8px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;">👤</div>
+          <div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="fr">Portail utilisateur · Mes voyages, favoris, transports</div>
+            <div style="font-size:13px;font-weight:500;color:var(--forest);" data-lang="en">User portal · My trips, favorites, transport</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TRIP DESIGNER UPDATE -->
+  <div style="margin-top:48px;background:var(--green-bg);border:1px solid rgba(45,122,74,0.2);border-radius:var(--radius);padding:28px 36px;display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:start;">
+    <div style="font-size:28px;">🔄</div>
+    <div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;" data-lang="fr">Mise à jour importante · Observée en cours d'analyse</div>
+      <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:8px;" data-lang="en">Important update · Observed during analysis</div>
+      <p style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:8px;" data-lang="fr">Le Trip Designer a ajouté le handoff vers une agence locale depuis mon analyse initiale.</p>
+      <p style="font-size:14px;font-weight:500;color:var(--forest);margin-bottom:8px;" data-lang="en">Trip Designer has added the handoff to a local agency since my initial analysis.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.7;" data-lang="fr">C'est un signal très positif qui confirme que l'équipe itère activement sur ce point de friction. Cela valide l'hypothèse que le handoff IA vers agence était un manque identifié en interne. La section Problème 1 a été mise à jour pour refléter ce changement.</p>
+      <p style="font-size:13px;color:var(--muted);line-height:1.7;" data-lang="en">This is a very positive signal that the team is actively iterating on this friction point. It validates the hypothesis that the AI to agency handoff was an internally identified gap. Problem 1 has been updated to reflect this change.</p>
+    </div>
+  </div>
+
+  <!-- PROBLEMS SECTION -->
+  <div class="section" id="problems">
+    <div style="margin-bottom:48px;">
+      <div class="eyebrow" style="margin-bottom:16px;" data-lang="fr">Problèmes identifiés</div>
+      <div class="eyebrow" style="margin-bottom:16px;" data-lang="en">Identified problems</div>
+      <h2 class="section-title" data-lang="fr">Trois axes <span style="font-weight:500;color:var(--sage);">prioritaires</span></h2>
+      <h2 class="section-title" data-lang="en">Three <span style="font-weight:500;color:var(--sage);">priority areas</span></h2>
+      <p class="lead" style="margin-top:12px;max-width:640px;" data-lang="fr">Chaque problème est accompagné de ses hypothèses, métriques de validation et recommandations. Cliquez pour explorer chaque axe en détail.</p>
+      <p class="lead" style="margin-top:12px;max-width:640px;" data-lang="en">Each problem comes with its hypotheses, validation metrics and recommendations. Click to explore each area in detail.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+      <a href="problem-1.html" style="text-decoration:none;display:block;">
+        <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;height:100%;transition:box-shadow 0.2s,transform 0.2s;cursor:pointer;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+            <div style="font-family:'Fraunces',serif;font-size:48px;color:rgba(26,51,38,0.08);line-height:1;">01</div>
+            <span class="badge badge-medium" data-lang="fr">Parcours fragmenté</span>
+            <span class="badge badge-medium" data-lang="en">Fragmented journey</span>
+          </div>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="fr">Le parcours utilisateur semble fragmenté</h3>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="en">The user journey appears fragmented</h3>
+          <p class="body" data-lang="fr">Trois entrées parallèles, une navigation bloquée dans le chat IA, et un projet qui semble ne pas être sauvegardé automatiquement. À valider avec les équipes.</p>
+          <p class="body" data-lang="en">Three parallel entry points, blocked navigation inside the AI chat, and a project that appears not to be automatically saved. Needs validation with the teams.</p>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="fr">Explorer →</div>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="en">Explore →</div>
+        </div>
+      </a><a href="problem-2.html" style="text-decoration:none;display:block;">
+        <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;height:100%;transition:box-shadow 0.2s,transform 0.2s;cursor:pointer;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+            <div style="font-family:'Fraunces',serif;font-size:48px;color:rgba(26,51,38,0.08);line-height:1;">02</div>
+            <span class="badge badge-medium" data-lang="fr">Friction à la conversion</span>
+            <span class="badge badge-medium" data-lang="en">Conversion friction</span>
+          </div>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="fr">Des frictions semblent réduire le taux de conversion</h3>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="en">Friction appears to reduce conversion rate</h3>
+          <p class="body" data-lang="fr">Le numéro de téléphone obligatoire et l'absence de pré-remplissage des données compte semblent créer des abandons avant la mise en relation avec une agence.</p>
+          <p class="body" data-lang="en">The mandatory phone number and absence of account data pre-fill appear to create drop-offs before agency connection. This needs to be validated with funnel data.</p>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="fr">Explorer →</div>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="en">Explore →</div>
+        </div>
+      </a><a href="problem-3.html" style="text-decoration:none;display:block;">
+        <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;height:100%;transition:box-shadow 0.2s,transform 0.2s;cursor:pointer;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-3px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+          <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+            <div style="font-family:'Fraunces',serif;font-size:48px;color:rgba(26,51,38,0.08);line-height:1;">03</div>
+            <span class="badge badge-neutral" data-lang="fr">Différenciation et mémoire</span>
+            <span class="badge badge-neutral" data-lang="en">Differentiation and memory</span>
+          </div>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="fr">La valeur différenciante d'Evaneos vs un LLM généraliste n'est pas claire</h3>
+          <h3 class="card-title" style="margin-bottom:12px;" data-lang="en">Evaneos's differentiating value vs a generic LLM is not clear</h3>
+          <p class="body" data-lang="fr">Pourquoi utiliser le Trip Designer plutôt que ChatGPT? La connexion avec des agences vérifiées est la vraie réponse, mais elle ne semble pas mise en avant au bon moment.</p>
+          <p class="body" data-lang="en">Why use Trip Designer over ChatGPT? The connection with vetted agencies is the real answer, but it does not seem to be surfaced at the right moment in the journey.</p>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="fr">Explorer →</div>
+          <div style="margin-top:24px;font-size:12px;font-weight:500;color:var(--sage);display:flex;align-items:center;gap:6px;" data-lang="en">Explore →</div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- PERSONAS -->
+  <div class="section" id="personas">
+    <div style="margin-bottom:48px;">
+      <div class="eyebrow" style="margin-bottom:16px;" data-lang="fr">Personas utilisateurs</div>
+      <div class="eyebrow" style="margin-bottom:16px;" data-lang="en">User personas</div>
+      <h2 class="section-title" data-lang="fr">Deux personas construits <span style="font-weight:500;color:var(--sage);">sans données internes</span></h2>
+      <h2 class="section-title" data-lang="en">Two personas built <span style="font-weight:500;color:var(--sage);">without internal data</span></h2>
+      <p class="lead" style="margin-top:12px;max-width:640px;" data-lang="fr">Faute d'accès aux insights utilisateurs d'Evaneos, j'ai construit ces personas à partir de mon expérience personnelle de voyageuse et de l'exploration du produit. Ils sont destinés à être enrichis avec les données réelles issues d'entretiens et de l'enquête Trip Designer déjà en cours.</p>
+      <p class="lead" style="margin-top:12px;max-width:640px;" data-lang="en">Without access to Evaneos user insights, I built these personas from my personal experience as a traveller and product exploration. They are meant to be enriched with real data from interviews and the Trip Designer survey already underway.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;">
+      <!-- PERSONA A -->
+      <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+        <div style="background:var(--forest);padding:28px 32px;color:var(--cream);">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:4px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(201,168,76,0.2);border:1.5px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:22px;">👩</div>
+            <div>
+              <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:400;">Marie Curie</div>
+              <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">La voyageuse planificatrice · 35 ans</div>
+              <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">The planner traveller · 35 years old</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:28px 32px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+            <div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Profil</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Profile</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">35 ans, voyage en couple 10 jours, phobie de l'avion, restrictions alimentaires</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Comportement</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Behaviour</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Planifie tout à l'avance. Vérifie musées, restaurants proches, plages. Voyage toujours en juillet (anniversaire).</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Frustrations</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Frustrations</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Prix des restaurants difficiles à trouver, cuisine locale inconnue, expériences trop touristiques.</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Objectifs</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Goals</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Authenticité, cours de cuisine local, off the beaten track, budget maîtrisé.</div>
+            </div>
+          </div>
+          <div style="background:var(--cream);border-radius:10px;padding:16px 20px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="fr">"Je veux qu'on me comprenne vraiment: mes restrictions alimentaires, mon anniversaire en juillet, mon refus de prendre l'avion. Est-ce qu'Evaneos peut faire ça mieux que ChatGPT?"</div>
+          <div style="background:var(--cream);border-radius:10px;padding:16px 20px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="en">"I want to feel truly understood: my dietary restrictions, my July birthday, my refusal to fly. Can Evaneos do that better than ChatGPT?"</div>
+        </div>
+      </div>
+
+      <!-- PERSONA B -->
+      <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+        <div style="background:var(--forest);padding:28px 32px;color:var(--cream);">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:4px;">
+            <div style="width:48px;height:48px;border-radius:50%;background:rgba(201,168,76,0.2);border:1.5px solid rgba(201,168,76,0.4);display:flex;align-items:center;justify-content:center;font-size:22px;">👴</div>
+            <div>
+              <div style="font-family:'Fraunces',serif;font-size:22px;font-weight:400;">Victor Hugo</div>
+              <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Le voyageur expérimenté non-digital · 73 ans</div>
+              <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">The experienced non-digital traveller · 73 years old</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding:28px 32px;">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;">
+            <div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Profil</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Profile</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">73 ans, retraité suisse au Canada, 40+ pays visités, voyage en couple avec aide du fils.</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Comportement</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Behaviour</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Préfère tout planifier à l'avance, imprime tous les documents, ne voyage jamais été/hiver.</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Frustrations</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Frustrations</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Interfaces digitales complexes, problème de genou (siège train), pas de self-service pour modifier le voyage.</div>
+            </div><div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Objectifs</div>
+              <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Goals</div>
+              <div style="font-size:13px;color:var(--text);line-height:1.5;">Tout planifié, restaurants loin des touristes, contact humain, simplicité de bout en bout.</div>
+            </div>
+          </div>
+          <div style="background:var(--cream);border-radius:10px;padding:16px 20px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="fr">"Mon fils m'aide pour la technologie, mais j'aimerais que ma femme et moi puissions gérer notre voyage nous-mêmes. Un vrai humain qui s'occupe de tout, c'est ce qu'on cherche."</div>
+          <div style="background:var(--cream);border-radius:10px;padding:16px 20px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="en">"My son helps me with technology, but I'd love for my wife and I to manage our trip ourselves. A real human who handles everything is what we are looking for."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ROADMAP SUMMARY -->
+  
+  <div class="section" id="agentic">
+    <div style="margin-bottom:48px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:16px;" data-lang="fr">Cerise sur le gâteau</div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:16px;" data-lang="en">The cherry on top</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:16px;" data-lang="fr">J'ai construit un agent qui automatise le travail manuel d'un PM</h2>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:16px;" data-lang="en">I built an agent that automates a PM's manual work</h2>
+      <p style="font-size:16px;color:var(--muted);max-width:680px;line-height:1.75;" data-lang="fr">Je lis une page Notion, et l'agent gère tout le reste: user stories dans Jira, emails de notification, décision de développement, code via Claude Code, mise à jour Jira. L'objectif est d'automatiser toutes les activités manuelles qui n'apportent pas de valeur dans le quotidien d'un Product Manager.</p>
+      <p style="font-size:16px;color:var(--muted);max-width:680px;line-height:1.75;" data-lang="en">I read a Notion page, and the agent handles everything else: user stories in Jira, notification emails, development decision, code via Claude Code, Jira update. The goal is to automate all manual activities that add no value to a Product Manager's daily work.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;">
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;" data-lang="fr">Pipeline actuel</div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;" data-lang="en">Current pipeline</div>
+        <div style="display:flex;flex-direction:column;gap:0;"><div style="display:flex;align-items:start;gap:16px;border-bottom:1px solid var(--border);padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">1</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Lire la page Notion et identifier les features</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Read the Notion page and identify features</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">L'agent lit le contexte produit et extrait les features à développer</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">The agent reads the product context and extracts features to build</div>
+  </div>
+</div><div style="display:flex;align-items:start;gap:16px;border-bottom:1px solid var(--border);padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">2</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Générer les user stories et ouvrir Jira</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Generate user stories and open Jira</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">User stories structurées créées automatiquement dans le backlog</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">Structured user stories automatically created in the backlog</div>
+  </div>
+</div><div style="display:flex;align-items:start;gap:16px;border-bottom:1px solid var(--border);padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">3</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Rédiger l'email de notification</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Draft the notification email</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">L'équipe est notifiée automatiquement sans action manuelle</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">The team is notified automatically without manual action</div>
+  </div>
+</div><div style="display:flex;align-items:start;gap:16px;border-bottom:1px solid var(--border);padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">4</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Lire le contexte et décider: peut-on développer?</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Read context and decide: can we build this?</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">L'agent vérifie les dépendances et la faisabilité</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">The agent checks dependencies and feasibility</div>
+  </div>
+</div><div style="display:flex;align-items:start;gap:16px;border-bottom:1px solid var(--border);padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">5</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Claude Code développe la feature</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Claude Code builds the feature</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">Le code est généré, testé et soumis en pull request</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">Code is generated, tested and submitted as a pull request</div>
+  </div>
+</div><div style="display:flex;align-items:start;gap:16px;padding:16px 0;">
+  <div style="width:32px;height:32px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;flex-shrink:0;">6</div>
+  <div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="fr">Mettre à jour Jira et notifier</div>
+    <div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:3px;" data-lang="en">Update Jira and notify</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="fr">Le ticket est fermé, l'équipe notifiée, le cycle recommence</div>
+    <div style="font-size:12px;color:var(--muted);" data-lang="en">The ticket is closed, the team notified, the cycle restarts</div>
+  </div>
+</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:16px;">
+        <div style="background:var(--forest);color:var(--cream);border-radius:var(--radius);padding:28px 32px;">
+          <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;" data-lang="fr">Grubster - Produit publié</div>
+          <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:12px;" data-lang="en">Grubster - Published product</div>
+          <p style="font-size:13px;color:rgba(245,240,232,0.7);line-height:1.7;margin-bottom:20px;" data-lang="fr">Capstone du certificat en Product Management de York University. Né d'une frustration personnelle en voyage: ne pas savoir combien coûte un repas avant d'entrer dans un restaurant. Construit et déployé avec Claude Code.</p>
+          <p style="font-size:13px;color:rgba(245,240,232,0.7);line-height:1.7;margin-bottom:20px;" data-lang="en">Capstone project from York University's Product Management certificate. Born from a personal travel frustration: not knowing how much a meal would cost before walking in. Built and deployed with Claude Code.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <a href="https://grubster.onrender.com/" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.1);padding:10px 16px;border-radius:8px;">🌐 <span data-lang="fr">Application publiée</span><span data-lang="en">Live application</span></a>
+            <a href="https://github.com/leticiaruttimann/grubster/tree/master" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.1);padding:10px 16px;border-radius:8px;">💻 <span data-lang="fr">Code source GitHub</span><span data-lang="en">GitHub source code</span></a>
+            <a href="grubster_pitch_deck.pdf" download style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.1);padding:10px 16px;border-radius:8px;">📊 <span data-lang="fr">Pitch deck produit</span><span data-lang="en">Product pitch deck</span></a>
+            <a href="https://vimeo.com/928788514/134e73f368" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.1);padding:10px 16px;border-radius:8px;">🎬 <span data-lang="fr">Vidéo de présentation</span><span data-lang="en">Demo video</span></a>
+          </div>
+        </div>
+        <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:24px 28px;">
+          <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;" data-lang="fr">Outils du pipeline</div>
+          <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--sage);margin-bottom:12px;" data-lang="en">Pipeline tools</div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <a href="https://www.notion.so/7fb5f9378b6782cf901d0184403f532f?v=02d5f9378b6783c188760816aeaab14c" target="_blank" style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--forest);text-decoration:none;">
+              <span style="font-size:16px;">📝</span>
+              <div><div style="font-weight:500;">Notion</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">Documentation produit et PRD</div><div style="font-size:12px;color:var(--muted);" data-lang="en">Product documentation and PRD</div></div>
+            </a>
+            <a href="https://leticiaruttimann.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--forest);text-decoration:none;">
+              <span style="font-size:16px;">🎯</span>
+              <div><div style="font-weight:500;">Jira</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">Gestion des sprints et backlog</div><div style="font-size:12px;color:var(--muted);" data-lang="en">Sprint management and backlog</div></div>
+            </a>
+            <div style="display:flex;align-items:center;gap:10px;font-size:13px;color:var(--forest);">
+              <span style="font-size:16px;">⚡</span>
+              <div><div style="font-weight:500;">Claude Code</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">Développement et déploiement</div><div style="font-size:12px;color:var(--muted);" data-lang="en">Development and deployment</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="roadmap">
+    <div style="margin-bottom:48px;display:flex;align-items:end;justify-content:space-between;flex-wrap:wrap;gap:20px;">
+      <div>
+        <div class="eyebrow" style="margin-bottom:16px;" data-lang="fr">Roadmap proposé</div>
+        <div class="eyebrow" style="margin-bottom:16px;" data-lang="en">Proposed roadmap</div>
+        <h2 class="section-title" data-lang="fr">12 mois · <span style="font-weight:500;color:var(--sage);">priorisé par ROI</span></h2>
+        <h2 class="section-title" data-lang="en">12 months · <span style="font-weight:500;color:var(--sage);">ROI-driven</span></h2>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;background:white;">
+      <div style="border-right:1px solid var(--border);">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);background:var(--forest);">
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:4px;" data-lang="fr">Q1</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:4px;" data-lang="en">Q1</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="fr">Fondations</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="en">Foundations</div>
+        </div>
+        <div style="padding:16px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🧭 Fix navigation chat IA</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">📊 Funnel analytics complet</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:var(--amber-bg);border-left:2px solid var(--amber);color:var(--forest);">🧪 A/B test téléphone optionnel</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🗣️ Entretiens utilisateurs (5 à 8)</div>
+        </div>
+      </div><div style="border-right:1px solid var(--border);">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);background:var(--forest-mid);">
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:4px;" data-lang="fr">Q2</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--cream);margin-bottom:4px;" data-lang="en">Q2</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="fr">Conversion</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="en">Conversion</div>
+        </div>
+        <div style="padding:16px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">💾 Sauvegarde auto itinéraire</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:var(--gold-light);border-left:2px solid var(--gold);color:var(--forest);">👤 Pré-remplissage formulaire</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">📈 Analyse résultats A/B test</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🔗 Itération handoff Trip Designer</div>
+        </div>
+      </div><div style="border-right:1px solid var(--border);">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);background:var(--warm);">
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="fr">Q3</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="en">Q3</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="fr">Personnalisation</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="en">Personalisation</div>
+        </div>
+        <div style="padding:16px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🧠 Mémoire agentique utilisateur</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🍽️ Fine-tuning: recommandations locales</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:var(--gold-light);border-left:2px solid var(--gold);color:var(--forest);">🗂️ Unifier les 3 entrées</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:var(--red-bg);border-left:2px solid var(--red);color:var(--forest);">🌐 Fix evaneos.com + Instagram</div>
+        </div>
+      </div><div style="border-right:1px solid var(--border);border-right:none;">
+        <div style="padding:20px 24px;border-bottom:1px solid var(--border);background:var(--warm);">
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="fr">Q4</div>
+          <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;" data-lang="en">Q4</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="fr">Scale</div>
+          <div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="en">Scale</div>
+        </div>
+        <div style="padding:16px 20px;display:flex;flex-direction:column;gap:8px;">
+          <div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🌍 Internationalisation Trip Designer</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:var(--gold-light);border-left:2px solid var(--gold);color:var(--forest);">✏️ Self-service: modifier/annuler voyage</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">💰 Optimisation coût LLM</div><div style="padding:8px 12px;border-radius:8px;font-size:12px;line-height:1.5;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);color:var(--forest);">🤖 Tests IA automatisés</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-name">Leticia Rüttimann</div>
+      <div class="footer-note" data-lang="fr">Analyse produit · Evaneos + Trip Designer (Beta) · Mai 2025</div>
+      <div class="footer-note" data-lang="en">Product analysis · Evaneos + Trip Designer (Beta) · May 2025</div>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:leticiaruttimann@gmail.com">leticiaruttimann@gmail.com</a>
+      <a href="https://linkedin.com/in/leticiaruttimann">LinkedIn</a>
+      <a href="Leticia_Ruttimann_CV.pdf" download data-lang="fr">Télécharger CV</a>
+      <a href="Leticia_Ruttimann_CV.pdf" download data-lang="en">Download CV</a>
+    </div>
+  </div>
+</div>
+<script>
+function setLang(lang){
+  document.body.className=document.body.className.replace(/lang-[a-z]+/g,'').trim()+' lang-'+lang;
+  document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.dataset.lang===lang);});
+  try{localStorage.setItem('lang',lang);}catch(e){}
+}
+(function(){var l='fr';try{l=localStorage.getItem('lang')||'fr';}catch(e){}setLang(l);})();
+</script>
+</body>
+</html>
