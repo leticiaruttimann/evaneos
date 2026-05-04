@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>Evaneos · Analyse Produit · Leticia Rüttimann</title>
+<style>:root{--forest:#1a3326;--forest-mid:#2c4f3b;--sage:#4a7c59;--gold:#c9a84c;--gold-light:rgba(201,168,76,0.12);--cream:#f5f0e8;--warm:#faf8f4;--text:#1c1c1c;--muted:#6b6b6b;--border:rgba(0,0,0,0.08);--radius:16px;--red:#b83232;--amber:#c47a0a;--amber-bg:rgba(196,122,10,0.07);--green:#2d7a4a;--green-bg:rgba(45,122,74,0.07);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--text);font-size:15px;line-height:1.6;}
+.nav{position:sticky;top:0;z-index:200;background:var(--forest);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-logo{font-family:'Fraunces',serif;font-size:17px;color:var(--cream);font-weight:300;text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.45);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.lang-pill{display:flex;background:rgba(255,255,255,0.08);border-radius:20px;padding:3px;gap:1px;margin-left:8px;}
+.lang-btn{font-size:11px;font-weight:500;padding:4px 13px;border-radius:16px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:rgba(245,240,232,0.4);font-family:'DM Sans',sans-serif;}
+.lang-btn.active{background:var(--gold);color:var(--forest);}
+.pw{max-width:1200px;margin:0 auto;padding:0 48px;}
+.sec{padding:80px 0 0;}
+.bm{display:inline-flex;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--amber-bg);color:var(--amber);}
+.bn{display:inline-flex;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:rgba(0,0,0,0.05);color:var(--muted);}
+.bp{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:40px;text-decoration:none;background:var(--gold);color:var(--forest);}
+.bg{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:40px;text-decoration:none;background:rgba(255,255,255,0.09);color:var(--cream);}
+.footer{background:var(--forest);color:var(--cream);padding:52px 48px;margin-top:80px;}
+.fi{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.fn{font-family:'Fraunces',serif;font-size:20px;font-weight:300;}
+.fl{display:flex;gap:20px;}
+.fl a{font-size:12px;color:rgba(245,240,232,0.5);text-decoration:none;}
+.fo{font-size:12px;color:rgba(245,240,232,0.3);margin-top:4px;}
+body.lang-fr [data-lang="en"]{display:none!important;}
+body.lang-en [data-lang="fr"]{display:none!important;}
+@media(max-width:960px){.nav,.pw,.footer{padding-left:20px;padding-right:20px;}.nav-links{gap:14px;}.nav-links a{font-size:10px;}}</style>
+</head>
+<body class="lang-fr">
+<nav class="nav"><a href="index.html" class="nav-logo">Leticia Rüttimann · Evaneos</a><div class="nav-links"><a href="index.html" class="active"><span data-lang="fr">Accueil</span><span data-lang="en">Home</span></a><a href="problem-1.html"><span data-lang="fr">Problème 1</span><span data-lang="en">Problem 1</span></a><a href="problem-2.html"><span data-lang="fr">Problème 2</span><span data-lang="en">Problem 2</span></a><a href="problem-3.html"><span data-lang="fr">Problème 3</span><span data-lang="en">Problem 3</span></a><a href="ai-projects.html"><span data-lang="fr">Projets IA</span><span data-lang="en">AI Projects</span></a><a href="evaneos-pm-assessment.html"><span data-lang="fr">À propos de moi</span><span data-lang="en">About Me</span></a><div class="lang-pill"><button class="lang-btn active" onclick="setLang('fr')">FR</button><button class="lang-btn" onclick="setLang('en')">EN</button></div></div></nav>
+
+<div style="background:var(--forest);color:var(--cream);padding:88px 48px 80px;position:relative;overflow:hidden;min-height:84vh;display:flex;align-items:center;">
+  <div style="position:absolute;top:-120px;right:-120px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="position:absolute;bottom:-80px;left:5%;width:350px;height:350px;border-radius:50%;background:radial-gradient(circle,rgba(74,124,89,0.1) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr 280px;gap:80px;align-items:center;position:relative;z-index:1;">
+    <div>
+      <div style="display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:5px 16px;border-radius:20px;margin-bottom:36px;" data-lang="fr">Analyse produit · Evaneos + Trip Designer (Beta)</div>
+      <div style="display:inline-block;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,168,76,0.3);padding:5px 16px;border-radius:20px;margin-bottom:36px;" data-lang="en">Product analysis · Evaneos + Trip Designer (Beta)</div>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.0;letter-spacing:-0.025em;margin-bottom:28px;" data-lang="fr">Ce que j'ai découvert<br><span style="color:var(--sage);">en explorant le produit.</span></h1>
+      <h1 style="font-family:'Fraunces',serif;font-size:clamp(44px,5.5vw,72px);font-weight:300;line-height:1.0;letter-spacing:-0.025em;margin-bottom:28px;" data-lang="en">What I found<br><span style="color:var(--sage);">exploring the product.</span></h1>
+      <p style="font-size:16px;color:rgba(245,240,232,0.55);font-weight:300;max-width:520px;margin-bottom:44px;line-height:1.75;" data-lang="fr">Une analyse terrain du parcours utilisateur, des points de friction identifiés et des recommandations priorisées par ROI. Réalisée depuis l'extérieur, sans accès aux données internes. Tout ce qui suit doit être validé avec les équipes.</p>
+      <p style="font-size:16px;color:rgba(245,240,232,0.55);font-weight:300;max-width:520px;margin-bottom:44px;line-height:1.75;" data-lang="en">A field-based analysis of the user journey, identified friction points, and ROI-driven recommendations. Conducted from the outside, without access to internal data. Everything here should be validated with the teams.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <a href="#problems" class="bp" data-lang="fr">Voir les problèmes identifiés</a>
+        <a href="#problems" class="bp" data-lang="en">See identified problems</a>
+        <a href="ai-projects.html" class="bg" data-lang="fr">Mes projets IA</a>
+        <a href="ai-projects.html" class="bg" data-lang="en">My AI projects</a>
+        <a href="evaneos-pm-assessment.html" class="bg" data-lang="fr">À propos de moi</a>
+        <a href="evaneos-pm-assessment.html" class="bg" data-lang="en">About Me</a>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,232,0.3);margin-bottom:12px;" data-lang="fr">Evaneos en chiffres · Impact Report 2024</div>
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(245,240,232,0.3);margin-bottom:12px;" data-lang="en">Evaneos in numbers · 2024 Impact Report</div>
+      <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:var(--radius);"><div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06);"><div style="font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--gold);margin-bottom:3px;">800k+</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Voyageurs accompagnés</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">Travellers served</div></div><div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06);"><div style="font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--gold);margin-bottom:3px;">640</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Agences partenaires</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">Partner agencies</div></div><div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06);"><div style="font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--gold);margin-bottom:3px;">15 ans</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Fondée en 2009</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">Founded in 2009</div></div><div style="padding:16px 20px;border-bottom:1px solid rgba(255,255,255,0.06);"><div style="font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--gold);margin-bottom:3px;">4,33/5</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Satisfaction agences 2024</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">Agency satisfaction 2024</div></div><div style="padding:16px 20px;"><div style="font-family:'Fraunces',serif;font-size:26px;font-weight:300;color:var(--gold);margin-bottom:3px;">B Corp</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Tourisme responsable</div><div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">Responsible tourism</div></div></div>
+    </div>
+  </div>
+</div>
+
+<div class="pw">
+
+  <div class="sec">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Contexte produit</div><div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">Product context</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--forest);margin-bottom:18px;" data-lang="fr">Evaneos connecte des voyageurs à des agences locales.</h2>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(26px,3vw,38px);font-weight:300;color:var(--forest);margin-bottom:18px;" data-lang="en">Evaneos connects travellers to local agencies.</h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:20px;" data-lang="fr">La promesse centrale: co-créer un voyage sur mesure, authentique et responsable, avec un expert local. Ce que Evaneos appelle les "Better Trips": des expériences qui bénéficient autant au voyageur qu'à la destination.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:20px;" data-lang="en">The core promise: co-create a tailor-made, authentic and responsible trip with a local expert. What Evaneos calls "Better Trips": experiences that benefit both the traveller and the destination.</p>
+        <div style="padding:18px 22px;background:var(--gold-light);border-radius:12px;border-left:3px solid var(--gold);">
+          <p style="font-size:13px;color:var(--forest);line-height:1.7;" data-lang="fr">Le Trip Designer (beta) est la fonctionnalité IA permettant de co-créer un itinéraire personnalisé avant d'être mis en relation avec une agence locale. C'est l'axe central de cette analyse.</p>
+          <p style="font-size:13px;color:var(--forest);line-height:1.7;" data-lang="en">Trip Designer (beta) is the AI feature that allows co-creating a personalised itinerary before being connected with a local agency. This is the central focus of this analysis.</p>
+        </div>
+      </div>
+      <div style="padding-top:44px;">
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;" data-lang="fr">Flows testés</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;" data-lang="en">Flows tested</div>
+        <div style="display:flex;flex-direction:column;gap:10px;"><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><div style="width:28px;height:28px;border-radius:7px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">🤖</div><div style="font-size:13px;font-weight:500;color:var(--forest);"><span data-lang="fr">Chat · On vous aide à choisir</span><span data-lang="en">Chat · On vous aide à choisir</span></div></div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><div style="width:28px;height:28px;border-radius:7px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">🗺️</div><div style="font-size:13px;font-weight:500;color:var(--forest);"><span data-lang="fr">Recherche destination + formulaire contact</span><span data-lang="en">Destination search + contact form</span></div></div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><div style="width:28px;height:28px;border-radius:7px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">✈️</div><div style="font-size:13px;font-weight:500;color:var(--forest);"><span data-lang="fr">Trip Designer (Beta) · Complet</span><span data-lang="en">Trip Designer (Beta) · End to end</span></div></div><div style="background:white;border:1px solid var(--border);border-radius:10px;padding:12px 16px;display:flex;align-items:center;gap:12px;"><div style="width:28px;height:28px;border-radius:7px;background:var(--forest);display:flex;align-items:center;justify-content:center;font-size:13px;flex-shrink:0;">👤</div><div style="font-size:13px;font-weight:500;color:var(--forest);"><span data-lang="fr">Portail utilisateur · Mes voyages</span><span data-lang="en">User portal · My trips</span></div></div></div>
+      </div>
+    </div>
+    <div style="margin-top:36px;background:var(--green-bg);border:1px solid rgba(45,122,74,0.2);border-radius:var(--radius);padding:22px 30px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;">
+      <div style="font-size:22px;">🔄</div>
+      <div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px;" data-lang="fr">Mise à jour observée en cours d'analyse</div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--green);margin-bottom:6px;" data-lang="en">Update observed during analysis</div>
+        <p style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;" data-lang="fr">Le Trip Designer a ajouté le handoff vers une agence locale depuis mon analyse initiale.</p>
+        <p style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:4px;" data-lang="en">Trip Designer has added the handoff to a local agency since my initial analysis.</p>
+        <p style="font-size:12px;color:var(--muted);line-height:1.65;" data-lang="fr">C'est un signal très positif qui confirme que l'équipe itère activement. La section Problème 1 a été mise à jour pour refléter ce changement.</p>
+        <p style="font-size:12px;color:var(--muted);line-height:1.65;" data-lang="en">This is a very positive signal that the team is actively iterating. Problem 1 has been updated to reflect this change.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec" id="problems">
+    <div style="margin-bottom:44px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Problèmes identifiés</div><div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">Identified problems</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="fr">Trois axes prioritaires</h2><h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="en">Three priority areas</h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;max-width:640px;" data-lang="fr">Chaque problème est accompagné de ses hypothèses, métriques de validation et recommandations. Cliquez pour explorer en détail.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;max-width:640px;" data-lang="en">Each problem comes with its hypotheses, validation metrics and recommendations. Click to explore in detail.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;"><a href="problem-1.html" style="text-decoration:none;display:block;background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+  <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+    <div style="font-family:'Fraunces',serif;font-size:52px;color:rgba(26,51,38,0.07);line-height:1;">01</div>
+    <span class="bm" data-lang="fr">Parcours fragmenté</span>
+    <span class="bm" data-lang="en">Fragmented journey</span>
+  </div>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="fr">Trois entrées parallèles (homepage, Chat, Trip Designer) sans guidance claire. Le Chat semble redondant avec le Trip Designer et coûte des tokens sans valeur ajoutée différenciante.</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="en">Three parallel entry points (homepage, Chat, Trip Designer) with no clear guidance. The Chat appears redundant with Trip Designer and costs tokens without adding differentiating value.</p>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="fr">Explorer</div>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="en">Explore</div>
+</a><a href="problem-2.html" style="text-decoration:none;display:block;background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+  <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+    <div style="font-family:'Fraunces',serif;font-size:52px;color:rgba(26,51,38,0.07);line-height:1;">02</div>
+    <span class="bm" data-lang="fr">Frictions à la conversion</span>
+    <span class="bm" data-lang="en">Conversion friction</span>
+  </div>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="fr">Lors du contact agence, les données du compte ne sont pas pré-remplies et le téléphone est obligatoire. Ces deux frictions surviennent exactement quand l'intention de conversion est la plus forte.</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="en">When contacting an agency, account data is not pre-filled and phone number is mandatory. These two friction points occur exactly when conversion intent is at its highest.</p>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="fr">Explorer</div>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="en">Explore</div>
+</a><a href="problem-3.html" style="text-decoration:none;display:block;background:white;border:1px solid var(--border);border-radius:var(--radius);padding:32px;transition:box-shadow 0.2s,transform 0.2s;" onmouseover="this.style.boxShadow='0 12px 40px rgba(0,0,0,0.1)';this.style.transform='translateY(-2px)'" onmouseout="this.style.boxShadow='none';this.style.transform='translateY(0)'">
+  <div style="display:flex;align-items:start;justify-content:space-between;margin-bottom:20px;">
+    <div style="font-family:'Fraunces',serif;font-size:52px;color:rgba(26,51,38,0.07);line-height:1;">03</div>
+    <span class="bn" data-lang="fr">Différenciation et mémoire</span>
+    <span class="bn" data-lang="en">Differentiation and memory</span>
+  </div>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="fr">Le Trip Designer ne retient aucune préférence entre les sessions. Marie revient pour planifier l'Italie: le système ne sait pas qu'elle ne prend pas l'avion et a des restrictions alimentaires.</p>
+  <p style="font-size:13px;color:var(--muted);line-height:1.65;margin-bottom:20px;" data-lang="en">Trip Designer retains no preferences between sessions. Marie returns to plan Italy: the system has no memory that she never flies and has dietary restrictions. She starts from zero every time.</p>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="fr">Explorer</div>
+  <div style="font-size:12px;font-weight:500;color:var(--sage);" data-lang="en">Explore</div>
+</a></div>
+  </div>
+
+  <div class="sec" id="personas">
+    <div style="margin-bottom:44px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Personas utilisateurs</div><div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">User personas</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="fr">Deux personas construits sans données internes</h2><h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="en">Two personas built without internal data</h2>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;max-width:640px;" data-lang="fr">Construits à partir de mon expérience personnelle de voyageuse et de l'exploration du produit. Destinés à être enrichis avec les données réelles issues d'entretiens et de l'enquête Trip Designer.</p>
+      <p style="font-size:15px;color:var(--muted);line-height:1.75;max-width:640px;" data-lang="en">Built from my personal experience as a traveller and product exploration. Meant to be enriched with real data from interviews and the Trip Designer survey already underway.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;"><div style="background:white;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+  <div style="background:var(--forest);padding:22px 26px;display:flex;align-items:center;gap:14px;">
+    <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,0.2);border:1.5px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">👩</div>
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--cream);">Marie Curie</div>
+      <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">La voyageuse planificatrice · 35 ans</div>
+      <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">The planner traveller · 35 ans</div>
+    </div>
+  </div>
+  <div style="padding:24px 26px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Profil</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Profile</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">35 ans, voyage en couple 10 jours, phobie de l'avion, restrictions alimentaires.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">35 years old, travels as a couple for 10 days, flight phobia, dietary restrictions.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Comportement</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Behaviour</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Planifie tout à l'avance. Vérifie musées, restaurants proches, plages. Voyage toujours en juillet (anniversaire).</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Plans everything in advance. Checks museums, nearby restaurants, beaches. Always travels in July (birthday).</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Frustrations</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Frustrations</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Prix des restaurants difficiles à trouver, cuisine locale inconnue, expériences trop touristiques.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Restaurant prices hard to find, unknown local cuisine, overly touristy experiences.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Objectifs</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Goals</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Authenticité, cours de cuisine local, off the beaten track, budget maîtrisé.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Authenticity, local cooking class, off the beaten track, controlled budget.</p>
+      </div>
+    </div>
+    <div style="background:var(--cream);border-radius:10px;padding:14px 18px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="fr">"Je veux qu'on me comprenne vraiment: mes restrictions alimentaires, mon anniversaire en juillet, mon refus de prendre l'avion. Est-ce qu'Evaneos peut faire ça mieux que ChatGPT?"</div>
+    <div style="background:var(--cream);border-radius:10px;padding:14px 18px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="en">"I want to feel truly understood: my dietary restrictions, my July birthday, my refusal to fly. Can Evaneos do that better than ChatGPT?"</div>
+  </div>
+</div><div style="background:white;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;">
+  <div style="background:var(--forest);padding:22px 26px;display:flex;align-items:center;gap:14px;">
+    <div style="width:44px;height:44px;border-radius:50%;background:rgba(201,168,76,0.2);border:1.5px solid rgba(201,168,76,0.35);display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;">👴</div>
+    <div>
+      <div style="font-family:'Fraunces',serif;font-size:20px;color:var(--cream);">Victor Hugo</div>
+      <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="fr">Le voyageur expérimenté non-digital · 73 ans</div>
+      <div style="font-size:12px;color:rgba(245,240,232,0.45);" data-lang="en">The experienced non-digital traveller · 73 ans</div>
+    </div>
+  </div>
+  <div style="padding:24px 26px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Profil</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Profile</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">73 ans, retraité suisse au Canada, 40+ pays visités, voyage en couple avec aide du fils.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">73 years old, retired Swiss in Canada, 40+ countries visited, travels as a couple with son's help.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Comportement</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Behaviour</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Préfère tout planifier à l'avance, imprime tous les documents, ne voyage jamais été/hiver.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Prefers everything planned in advance, prints all documents, never travels in summer or winter.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Frustrations</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Frustrations</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Interfaces digitales complexes, problème de genou (siège train), pas de self-service pour modifier le voyage.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Complex digital interfaces, knee issue requiring specific train seating, no self-service to modify the trip.</p>
+      </div>
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="fr">Objectifs</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;" data-lang="en">Goals</div>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="fr">Tout planifié, restaurants loin des touristes, contact humain, simplicité de bout en bout.</p>
+        <p style="font-size:13px;color:var(--text);line-height:1.6;" data-lang="en">Everything planned, restaurants away from tourists, human contact, end-to-end simplicity.</p>
+      </div>
+    </div>
+    <div style="background:var(--cream);border-radius:10px;padding:14px 18px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="fr">"Mon fils m'aide pour la technologie, mais j'aimerais que ma femme et moi puissions gérer notre voyage nous-mêmes. Un vrai humain qui s'occupe de tout, c'est ce qu'on cherche."</div>
+    <div style="background:var(--cream);border-radius:10px;padding:14px 18px;border-left:3px solid var(--gold);font-size:13px;color:var(--forest);line-height:1.65;" data-lang="en">"My son helps me with technology, but I'd love for my wife and I to manage our trip ourselves. A real human who handles everything is what we are looking for."</div>
+  </div>
+</div></div>
+  </div>
+
+  <div class="sec" id="roadmap">
+    <div style="margin-bottom:44px;">
+      <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Roadmap proposé</div><div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">Proposed roadmap</div>
+      <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="fr">12 mois · priorisé par ROI</h2><h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,44px);font-weight:300;color:var(--forest);margin-bottom:14px;" data-lang="en">12 months · ROI driven</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;"><div style="border-right:1px solid var(--border);"><div style="padding:16px 18px;border-bottom:1px solid var(--border);background:var(--forest);"><div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-bottom:4px;">Q1</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="fr">Fondations</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="en">Foundations</div></div><div style="padding:12px 14px;background:white;"><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Fix navigation Chat</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">Fix Chat navigation</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="fr">Funnel analytics complet</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="en">Full funnel analytics</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="fr">A/B test: téléphone optionnel</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="en">A/B test: optional phone</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="fr">Entretiens utilisateurs</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="en">User interviews</div></div></div><div style="border-right:1px solid var(--border);"><div style="padding:16px 18px;border-bottom:1px solid var(--border);background:var(--forest);"><div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(245,240,232,0.4);margin-bottom:4px;">Q2</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="fr">Conversion</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--cream);" data-lang="en">Conversion</div></div><div style="padding:12px 14px;background:white;"><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Sauvegarde auto itinéraire</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">Auto-save itinerary</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="fr">Pré-remplissage formulaire</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="en">Pre-fill agency form</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="fr">Analyse résultats A/B</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="en">Analyse A/B results</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Itération handoff Trip Designer</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">Trip Designer handoff iteration</div></div></div><div style="border-right:1px solid var(--border);"><div style="padding:16px 18px;border-bottom:1px solid var(--border);background:white;"><div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Q3</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="fr">Personnalisation</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="en">Personalisation</div></div><div style="padding:12px 14px;background:white;"><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Mémoire agentique utilisateur</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">Agentic user memory</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Fine-tuning: recommandations locales</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">Fine-tuning: local recommendations</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="fr">Unifier les 3 entrées</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="en">Unify 3 entry points</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.05);border-left:2px solid rgba(74,124,89,0.3);margin-bottom:3px;" data-lang="fr">Fix evaneos.com + Instagram</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.05);border-left:2px solid rgba(74,124,89,0.3);margin-bottom:3px;" data-lang="en">Fix evaneos.com + Instagram</div></div></div><div style=""><div style="padding:16px 18px;border-bottom:1px solid var(--border);background:white;"><div style="font-size:10px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;">Q4</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="fr">Scale</div><div style="font-family:'Fraunces',serif;font-size:17px;color:var(--forest);" data-lang="en">Scale</div></div><div style="padding:12px 14px;background:white;"><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.05);border-left:2px solid rgba(74,124,89,0.3);margin-bottom:3px;" data-lang="fr">Internationalisation Trip Designer</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.05);border-left:2px solid rgba(74,124,89,0.3);margin-bottom:3px;" data-lang="en">Trip Designer internationalisation</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="fr">Self-service: modifier/annuler voyage</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:var(--gold-light);border-left:2px solid var(--gold);margin-bottom:3px;" data-lang="en">Self-service: edit/cancel trip</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="fr">Optimisation coût LLM</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);margin-bottom:3px;" data-lang="en">LLM cost optimisation</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="fr">Tests IA automatisés</div><div style="padding:7px 9px;border-radius:7px;font-size:11px;color:var(--forest);background:rgba(184,50,50,0.06);border-left:2px solid var(--red);margin-bottom:3px;" data-lang="en">Automated AI testing</div></div></div></div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;margin-top:14px;">
+      <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(74,124,89,0.1);border-left:2px solid var(--sage);"></div><span data-lang="fr">IA</span><span data-lang="en">AI</span></div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);"><div style="width:12px;height:12px;border-radius:2px;background:var(--gold-light);border-left:2px solid var(--gold);"></div>UX</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(184,50,50,0.06);border-left:2px solid var(--red);"></div>Data</div>
+      <div style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);"><div style="width:12px;height:12px;border-radius:2px;background:rgba(74,124,89,0.05);border-left:2px solid rgba(74,124,89,0.3);"></div><span data-lang="fr">Croissance</span><span data-lang="en">Growth</span></div>
+    </div>
+  </div>
+
+</div>
+<div class="footer"><div class="fi"><div><div class="fn">Leticia Rüttimann</div><div class="fo" data-lang="fr">Analyse produit · Evaneos + Trip Designer (Beta) · Mai 2025</div><div class="fo" data-lang="en">Product analysis · Evaneos + Trip Designer (Beta) · May 2025</div></div><div class="fl"><a href="mailto:leticiaruttimann@gmail.com">leticiaruttimann@gmail.com</a><a href="https://linkedin.com/in/leticiaruttimann">LinkedIn</a><a href="Leticia_Ruttimann_CV.pdf" download data-lang="fr">Télécharger CV</a><a href="Leticia_Ruttimann_CV.pdf" download data-lang="en">Download CV</a></div></div></div>
+<script>function setLang(lang){document.body.className=document.body.className.replace(/lang-[a-z]+/g,'').trim()+' lang-'+lang;document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.trim()===lang.toUpperCase());});try{localStorage.setItem('lang',lang);}catch(e){}}
+(function(){var l='fr';try{l=localStorage.getItem('lang')||'fr';}catch(e){}setLang(l);})();</script>
+</body>
+</html>

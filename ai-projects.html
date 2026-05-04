@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<title>AI Projects · Leticia Rüttimann</title>
+<style>:root{--forest:#1a3326;--forest-mid:#2c4f3b;--sage:#4a7c59;--gold:#c9a84c;--gold-light:rgba(201,168,76,0.12);--cream:#f5f0e8;--warm:#faf8f4;--text:#1c1c1c;--muted:#6b6b6b;--border:rgba(0,0,0,0.08);--radius:16px;--red:#b83232;--amber:#c47a0a;--amber-bg:rgba(196,122,10,0.07);--green:#2d7a4a;--green-bg:rgba(45,122,74,0.07);}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--warm);color:var(--text);font-size:15px;line-height:1.6;}
+.nav{position:sticky;top:0;z-index:200;background:var(--forest);display:flex;align-items:center;justify-content:space-between;padding:0 48px;height:56px;border-bottom:1px solid rgba(255,255,255,0.07);}
+.nav-logo{font-family:'Fraunces',serif;font-size:17px;color:var(--cream);font-weight:300;text-decoration:none;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:11px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(245,240,232,0.45);text-decoration:none;transition:color 0.2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);}
+.lang-pill{display:flex;background:rgba(255,255,255,0.08);border-radius:20px;padding:3px;gap:1px;margin-left:8px;}
+.lang-btn{font-size:11px;font-weight:500;padding:4px 13px;border-radius:16px;border:none;cursor:pointer;transition:all 0.2s;background:transparent;color:rgba(245,240,232,0.4);font-family:'DM Sans',sans-serif;}
+.lang-btn.active{background:var(--gold);color:var(--forest);}
+.pw{max-width:1200px;margin:0 auto;padding:0 48px;}
+.sec{padding:80px 0 0;}
+.bm{display:inline-flex;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:var(--amber-bg);color:var(--amber);}
+.bn{display:inline-flex;font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:4px 12px;border-radius:20px;background:rgba(0,0,0,0.05);color:var(--muted);}
+.bp{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:40px;text-decoration:none;background:var(--gold);color:var(--forest);}
+.bg{display:inline-flex;align-items:center;gap:8px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;padding:12px 24px;border-radius:40px;text-decoration:none;background:rgba(255,255,255,0.09);color:var(--cream);}
+.footer{background:var(--forest);color:var(--cream);padding:52px 48px;margin-top:80px;}
+.fi{max-width:1200px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;}
+.fn{font-family:'Fraunces',serif;font-size:20px;font-weight:300;}
+.fl{display:flex;gap:20px;}
+.fl a{font-size:12px;color:rgba(245,240,232,0.5);text-decoration:none;}
+.fo{font-size:12px;color:rgba(245,240,232,0.3);margin-top:4px;}
+body.lang-fr [data-lang="en"]{display:none!important;}
+body.lang-en [data-lang="fr"]{display:none!important;}
+@media(max-width:960px){.nav,.pw,.footer{padding-left:20px;padding-right:20px;}.nav-links{gap:14px;}.nav-links a{font-size:10px;}}</style>
+</head>
+<body class="lang-fr">
+<nav class="nav"><a href="index.html" class="nav-logo">Leticia Rüttimann · Evaneos</a><div class="nav-links"><a href="index.html"><span data-lang="fr">Accueil</span><span data-lang="en">Home</span></a><a href="problem-1.html"><span data-lang="fr">Problème 1</span><span data-lang="en">Problem 1</span></a><a href="problem-2.html"><span data-lang="fr">Problème 2</span><span data-lang="en">Problem 2</span></a><a href="problem-3.html"><span data-lang="fr">Problème 3</span><span data-lang="en">Problem 3</span></a><a href="ai-projects.html" class="active"><span data-lang="fr">Projets IA</span><span data-lang="en">AI Projects</span></a><a href="evaneos-pm-assessment.html"><span data-lang="fr">À propos de moi</span><span data-lang="en">About Me</span></a><div class="lang-pill"><button class="lang-btn active" onclick="setLang('fr')">FR</button><button class="lang-btn" onclick="setLang('en')">EN</button></div></div></nav>
+
+<div style="background:var(--forest);color:var(--cream);padding:72px 48px 64px;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(201,168,76,0.07) 0%,transparent 65%);pointer-events:none;"></div>
+  <div style="max-width:1200px;margin:0 auto;position:relative;z-index:1;">
+    <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;" data-lang="fr">Mes projets IA</div>
+    <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;" data-lang="en">My AI projects</div>
+    <h1 style="font-family:'Fraunces',serif;font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px;" data-lang="fr">Ce que je construis<br>avec l'IA.</h1>
+    <h1 style="font-family:'Fraunces',serif;font-size:clamp(36px,4vw,56px);font-weight:300;line-height:1.05;letter-spacing:-0.02em;margin-bottom:20px;" data-lang="en">What I am building<br>with AI.</h1>
+    <p style="font-size:15px;color:rgba(245,240,232,0.55);font-weight:300;max-width:560px;line-height:1.75;" data-lang="fr">Deux projets qui montrent comment j'utilise l'IA comme levier de productivité et de création: Grubster, un produit publié, et un pipeline agentique qui automatise le travail quotidien d'un Product Manager.</p>
+    <p style="font-size:15px;color:rgba(245,240,232,0.55);font-weight:300;max-width:560px;line-height:1.75;" data-lang="en">Two projects that show how I use AI as a productivity and creation lever: Grubster, a published product, and an agentic pipeline that automates a Product Manager's daily work.</p>
+  </div>
+</div>
+
+<div class="pw">
+
+  <!-- GRUBSTER -->
+  <div class="sec">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Projet 01 · Produit publié</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">Project 01 · Published product</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--forest);margin-bottom:16px;">Grubster</h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;" data-lang="fr">Capstone du certificat en Product Management de York University. Né d'une frustration personnelle en voyage: ne pas pouvoir savoir combien coûte vraiment un repas avant d'entrer dans un restaurant.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;" data-lang="en">Capstone from York University's Product Management certificate. Born from a personal travel frustration: not knowing how much a meal would actually cost before walking in.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px;" data-lang="fr">J'ai utilisé Claude Code pour construire et déployer l'application, en lui fournissant toute la documentation produit que j'avais créée pendant le cours: personas, user stories, roadmap, prototype Figma.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px;" data-lang="en">I used Claude Code to build and deploy the application, providing it with all the product documentation I had created during the course: personas, user stories, roadmap, Figma prototype.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;" data-lang="fr">
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Product Management</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Claude Code</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">York University</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Travel Tech</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;" data-lang="en">
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Product Management</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Claude Code</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">York University</span>
+          <span style="background:var(--gold-light);color:var(--forest);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Travel Tech</span>
+        </div>
+      </div>
+      <div style="background:var(--forest);color:var(--cream);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column;gap:10px;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;" data-lang="fr">Accéder au projet</div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px;" data-lang="en">Access the project</div>
+        <a href="https://grubster.onrender.com/" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="fr">🌐 Application publiée</a><a href="https://grubster.onrender.com/" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="en">🌐 Live application</a><a href="https://github.com/leticiaruttimann/grubster/tree/master" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="fr">💻 Code source GitHub</a><a href="https://github.com/leticiaruttimann/grubster/tree/master" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="en">💻 GitHub source code</a><a href="grubster_pitch_deck.pdf" target="_self" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="fr">📊 Pitch deck produit</a><a href="grubster_pitch_deck.pdf" target="_self" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="en">📊 Product pitch deck</a><a href="https://vimeo.com/928788514/134e73f368" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="fr">🎬 Vidéo de présentation</a><a href="https://vimeo.com/928788514/134e73f368" target="_blank" style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--cream);text-decoration:none;background:rgba(255,255,255,0.09);padding:10px 16px;border-radius:8px;" data-lang="en">🎬 Demo video</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- AGENTIC PIPELINE -->
+  <div class="sec" style="padding-bottom:80px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
+      <div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="fr">Projet 02 · En cours</div>
+        <div style="font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--sage);margin-bottom:14px;" data-lang="en">Project 02 · In progress</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--forest);margin-bottom:16px;" data-lang="fr">Pipeline agentique PM</h2>
+        <h2 style="font-family:'Fraunces',serif;font-size:clamp(28px,3vw,42px);font-weight:300;color:var(--forest);margin-bottom:16px;" data-lang="en">Agentic PM pipeline</h2>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;" data-lang="fr">Je lis une page Notion, et l'agent gère tout le reste: user stories dans Jira, emails de notification, décision de développement, code via Claude Code, mise à jour Jira.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:16px;" data-lang="en">I read a Notion page, and the agent handles everything else: user stories in Jira, notification emails, development decision, code via Claude Code, Jira update.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px;" data-lang="fr">L'objectif est d'automatiser toutes les activités manuelles qui n'apportent pas de valeur dans le quotidien d'un Product Manager. Une interface UI/UX est en cours de développement et sera publiée prochainement.</p>
+        <p style="font-size:15px;color:var(--muted);line-height:1.75;margin-bottom:24px;" data-lang="en">The goal is to automate all manual activities that add no value to a Product Manager's daily work. A UI/UX interface is currently in development and will be published soon.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;" data-lang="fr">
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Agentic AI</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Notion</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Jira</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Claude Code</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">En cours</span>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;" data-lang="en">
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Agentic AI</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Notion</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Jira</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">Claude Code</span>
+          <span style="background:var(--green-bg);color:var(--green);font-size:11px;padding:4px 12px;border-radius:20px;font-weight:500;">In progress</span>
+        </div>
+        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.notion.so/7fb5f9378b6782cf901d0184403f532f" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--forest);text-decoration:none;background:white;border:1px solid var(--border);padding:10px 16px;border-radius:8px;" data-lang="fr">📝 Voir Notion</a>
+          <a href="https://www.notion.so/7fb5f9378b6782cf901d0184403f532f" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--forest);text-decoration:none;background:white;border:1px solid var(--border);padding:10px 16px;border-radius:8px;" data-lang="en">📝 View Notion</a>
+          <a href="https://leticiaruttimann.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--forest);text-decoration:none;background:white;border:1px solid var(--border);padding:10px 16px;border-radius:8px;" data-lang="fr">🎯 Voir Jira</a>
+          <a href="https://leticiaruttimann.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog" target="_blank" style="display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--forest);text-decoration:none;background:white;border:1px solid var(--border);padding:10px 16px;border-radius:8px;" data-lang="en">🎯 View Jira</a>
+        </div>
+      </div>
+      <div style="background:white;border:1px solid var(--border);border-radius:var(--radius);padding:8px 24px;">
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;padding:14px 0 0;" data-lang="fr">Pipeline actuel · 6 étapes</div>
+        <div style="font-size:11px;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;padding:14px 0 0;" data-lang="en">Current pipeline · 6 steps</div>
+        <div style="display:flex;align-items:start;gap:14px;border-bottom:1px solid var(--border);padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">1</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Lire la page Notion et identifier les features</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Read the Notion page and identify features</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">L'agent lit le contexte produit et extrait les features à développer</div><div style="font-size:12px;color:var(--muted);" data-lang="en">The agent reads the product context and extracts features to build</div></div></div><div style="display:flex;align-items:start;gap:14px;border-bottom:1px solid var(--border);padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">2</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Générer les user stories et ouvrir Jira</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Generate user stories and open Jira</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">User stories structurées créées automatiquement dans le backlog</div><div style="font-size:12px;color:var(--muted);" data-lang="en">Structured user stories automatically created in the backlog</div></div></div><div style="display:flex;align-items:start;gap:14px;border-bottom:1px solid var(--border);padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">3</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Rédiger l'email de notification</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Draft the notification email</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">L'équipe est notifiée automatiquement sans action manuelle</div><div style="font-size:12px;color:var(--muted);" data-lang="en">The team is notified automatically without manual action</div></div></div><div style="display:flex;align-items:start;gap:14px;border-bottom:1px solid var(--border);padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">4</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Lire le contexte et décider: peut-on développer?</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Read context and decide: can we build this?</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">L'agent vérifie les dépendances et la faisabilité</div><div style="font-size:12px;color:var(--muted);" data-lang="en">The agent checks dependencies and feasibility</div></div></div><div style="display:flex;align-items:start;gap:14px;border-bottom:1px solid var(--border);padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">5</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Claude Code développe la feature</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Claude Code builds the feature</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">Le code est généré, testé et soumis en pull request</div><div style="font-size:12px;color:var(--muted);" data-lang="en">Code is generated, tested and submitted as pull request</div></div></div><div style="display:flex;align-items:start;gap:14px;padding:14px 0;"><div style="width:28px;height:28px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;flex-shrink:0;">6</div><div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="fr">Mettre à jour Jira et notifier</div><div style="font-size:13px;font-weight:500;color:var(--forest);margin-bottom:1px;" data-lang="en">Update Jira and notify</div><div style="font-size:12px;color:var(--muted);" data-lang="fr">Le ticket est fermé, l'équipe notifiée, le cycle recommence</div><div style="font-size:12px;color:var(--muted);" data-lang="en">The ticket is closed, the team notified, the cycle restarts</div></div></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="footer"><div class="fi"><div><div class="fn">Leticia Rüttimann</div><div class="fo" data-lang="fr">Analyse produit · Evaneos + Trip Designer (Beta) · Mai 2025</div><div class="fo" data-lang="en">Product analysis · Evaneos + Trip Designer (Beta) · May 2025</div></div><div class="fl"><a href="mailto:leticiaruttimann@gmail.com">leticiaruttimann@gmail.com</a><a href="https://linkedin.com/in/leticiaruttimann">LinkedIn</a><a href="Leticia_Ruttimann_CV.pdf" download data-lang="fr">Télécharger CV</a><a href="Leticia_Ruttimann_CV.pdf" download data-lang="en">Download CV</a></div></div></div>
+<script>function setLang(lang){document.body.className=document.body.className.replace(/lang-[a-z]+/g,'').trim()+' lang-'+lang;document.querySelectorAll('.lang-btn').forEach(function(b){b.classList.toggle('active',b.textContent.trim()===lang.toUpperCase());});try{localStorage.setItem('lang',lang);}catch(e){}}
+(function(){var l='fr';try{l=localStorage.getItem('lang')||'fr';}catch(e){}setLang(l);})();</script>
+</body>
+</html>
